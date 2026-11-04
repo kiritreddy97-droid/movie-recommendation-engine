@@ -68,8 +68,10 @@ function searchMovies(
     ];
     
     if (!empty($query)) {
-        $sql .= " AND (m.title LIKE :query OR m.director LIKE :query OR m.cast_members LIKE :query)";
-        $params[':query'] = "%{$query}%";
+        $sql .= " AND (m.title LIKE :query_title OR m.director LIKE :query_director OR m.cast_members LIKE :query_cast)";
+        $params[':query_title'] = "%{$query}%";
+        $params[':query_director'] = "%{$query}%";
+        $params[':query_cast'] = "%{$query}%";
     }
     
     if (!empty($genre)) {
