@@ -19,7 +19,7 @@ DB_CONFIG = {
     'host': os.getenv('DB_HOST', 'localhost'),
     'database': os.getenv('DB_NAME', 'movie_db'),
     'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', ''),
+    'password': os.getenv('DB_PASS', ''),
     'port': int(os.getenv('DB_PORT', 3306))
 }
 
